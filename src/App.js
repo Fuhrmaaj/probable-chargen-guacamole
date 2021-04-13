@@ -1,15 +1,22 @@
+import React, { useState } from "react";
 import logo from './logo.svg';
 import './App.css';
 import OriginStat from "./components/OriginStat/OriginStat";
 import OriginsInfo from "./components/OriginsInfo/OriginsInfo";
 
 function App() {
+  const [charName, setCharName] = useState("John The Large Proportioned");
+
+  function onCharNameChange(event) {
+    setCharName(event.target.value);
+  }
+
   return (
     <div className="App">
       <header>
     <h1>Rogue Trader</h1>
     <OriginsInfo>
-      <OriginStat title={"Character Name"} value={"John The Large Proportioned"}/>
+      <OriginStat title={"Character Name"} value={charName} onChange={onCharNameChange}/>
       <OriginStat title={"Player Name"} value={"John Smallbody"}/>
     </OriginsInfo>
     <div className="origins-info">
