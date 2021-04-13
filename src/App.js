@@ -1,25 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import OriginStat from "./components/OriginStat/OriginStat";
+import OriginsInfo from "./components/OriginsInfo/OriginsInfo";
 
 function App() {
   return (
     <div className="App">
       <header>
     <h1>Rogue Trader</h1>
-    <div className="origins-info">
-      <div className="origins-left">
-        <div className="category">
-          <p><strong>Character Name</strong></p>
-        </div>
-        <div className="blank"></div>
-      </div>
-      <div className="origins-right">
-        <div className="category">
-          <p><strong>Player Name</strong></p>
-        </div>
-        <div className="blank"></div>
-      </div>
-    </div>
+    <OriginsInfo>
+      <OriginStat title={"Character Name"} value={"John The Large Proportioned"}/>
+      <OriginStat title={"Player Name"} value={"John Smallbody"}/>
+    </OriginsInfo>
     <div className="origins-info">
       <div className="origins-left">
         <div className="category">
